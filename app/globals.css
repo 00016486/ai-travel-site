@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg: #f6fbff;
+  --card: #ffffff;
+  --ink: #050b18;
+  --muted: #5f6b7b;
+  --brand: #0d6efd;
+  --brand-deep: #0a4bab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, #c9e2ff 0%, transparent 28%),
+    radial-gradient(circle at 90% 0%, #dcecff 0%, transparent 35%),
+    radial-gradient(circle at top, #e8f2ff 0%, var(--bg) 35%, #f1f7ff 100%);
+  color: var(--ink);
+  font-family:
+    "Plus Jakarta Sans",
+    "Inter",
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.glass {
+  background: color-mix(in oklab, white 84%, #d7e9ff 16%);
+  border: 1px solid color-mix(in oklab, var(--brand) 20%, white 80%);
+  box-shadow: 0 14px 32px rgba(13, 76, 161, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.font-hero-title {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-hero-body {
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
