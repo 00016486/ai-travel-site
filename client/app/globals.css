@@ -38,8 +38,8 @@ body {
 }
 
 .glass {
-  background: color-mix(in oklab, white 84%, #d7e9ff 16%);
-  border: 1px solid color-mix(in oklab, var(--brand) 20%, white 80%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(13, 110, 253, 0.15);
   box-shadow: 0 14px 32px rgba(13, 76, 161, 0.12);
   backdrop-filter: blur(8px);
 }
@@ -50,4 +50,48 @@ body {
 
 .font-hero-body {
   font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+/* Hero animations */
+.hero-fade-in {
+  animation: hero-fade-in 800ms ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.hero-fade-in-delayed {
+  animation: hero-fade-in 900ms ease-out 120ms forwards;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.hero-card-float {
+  animation: hero-card-float 5200ms ease-in-out infinite;
+}
+
+@keyframes hero-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-card-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
